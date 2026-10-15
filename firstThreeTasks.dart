@@ -13,9 +13,7 @@ void calculateTotal(double price, int quantity) {
 }
 
 void greetUser({required String name, String greeting = "Hello"}) {
-  print("$greeting
-  
-   $name!");
+  print("$greeting $name!");
 }
 
 void calculateOrder ({required double price,required int quantity,double discount=0 ,double deliveryFee=0 }){
