@@ -1,10 +1,21 @@
 String duckDuckGoose(List<dynamic> players, int goose) {
-  int index = goose % players.length -1;
-  return (index < 0)?players[index + players.length]:players[index];
+  return players[(goose-1)%players.length].name;
+}
+
+class Player {
+  String name;
+  Player(this.name);
 }
 
 void main() {
-  print(duckDuckGoose(['a', 'b', 'c', 'd'], 1));
-  print(duckDuckGoose(['a', 'b', 'c', 'd'], 5));
-  print(duckDuckGoose(['a', 'b', 'c', 'd'], 4));
+  List<Player> players = [
+    Player('a'),
+    Player('b'),
+    Player('c'),
+    Player('d'),
+  ];
+
+  print(duckDuckGoose(players, 1)); 
+  print(duckDuckGoose(players, 5)); 
+  print(duckDuckGoose(players, 4));
 }
